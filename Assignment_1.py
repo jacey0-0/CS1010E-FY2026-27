@@ -31,7 +31,7 @@ def power_sum(p,a,b):
     return (a**p) if a == b else (a**p) + power_sum(p, a + 1, b)
 
 def power_big_sum(p,a,b):
-    return a**p if a == b else power_big_sum(p, a, (a + b)// 2) + power_big_sum(p, ((a + b)// 2) + 1, b)  # base case: a**p, divide and conquer with mid point= a+b//'2' O(logN) space complexity 
+    return a**p if a == b else power_big_sum(p, a, (a + b) // 2) + power_big_sum(p, ((a + b) // 2) + 1, b)  # base case: a**p, divide and conquer with mid point= a+b//'2' O(logN) space complexity 
                                                                                             
                 
     
