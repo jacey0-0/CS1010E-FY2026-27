@@ -29,13 +29,13 @@ def checksum_calculator_ho(multiplier):
     calc_sum = multiply_and_add_ho(multiplier)
     
     def calc(str_series):
-        prefix = reduce(lambda acc, val:acc + val, filter(lambda c: not('0' <= c <= '9'), str_series), '') 
+        prefix = reduce(lambda acc, val:acc + val, filter(lambda c: not('0' <= c <= '9'), str_series), '')
         num_series = reduce(lambda acc, val:acc + val, filter(lambda c: '0' <= c <= '9', str_series), '')
         
         prefix_tuple = convert_prefix(prefix)
         num_series_tuple = convert_num_series(num_series)
         series = prefix_tuple + num_series_tuple
-        remainder = calc_sum(series) % 19print(value, new_sum, end="#\n")
+        remainder = calc_sum(series) % 19
         return remainder_to_checksum_letter(remainder)
     return calc
 
