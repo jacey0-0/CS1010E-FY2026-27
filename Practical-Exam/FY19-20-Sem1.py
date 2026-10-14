@@ -53,4 +53,13 @@ def all_happy_number(n,m):
     lst = [result for result in map(is_happy_number, range(n, m + 1)) if result is not None]
  
     return lst
+
+def is_unique(seq):
+    cnt = 0
+    for i in seq:
+        if i in seq[cnt+1:]:
+            return False
+        cnt += 1
+    return True
+
     
